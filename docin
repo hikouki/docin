@@ -1,8 +1,6 @@
 #!/bin/sh
 
-[ $TERM = "screen" ] && fzf=fzf || fzf=fzf-tmux
-
-container=`docker ps --format "{{.Names}}" | $fzf --reverse --exit-0 --select-1 --tac`
+container=`docker ps --format "{{.Names}}" | fzf-tmux --reverse --exit-0 --select-1 --tac`
 
 if [ -n "$container" ]; then
     docker exec -it $container /bin/bash
