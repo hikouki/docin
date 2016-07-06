@@ -3,7 +3,7 @@
 container=`docker ps --format "{{.Names}}" | fzf-tmux --reverse --exit-0 --select-1 --tac`
 
 if [ -n "$container" ]; then
-    docker exec -it $container /bin/bash
+    docker exec -it $container /bin/bash --login
 else
     echo Error: Don\'t have any containers.
 fi
