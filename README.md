@@ -3,6 +3,15 @@ Go into a docker container by fzf interface.
 
 ![https://j.gifs.com/xkmLN9.gif](https://j.gifs.com/xkmLN9.gif)
 
+# Install
+
+By homebrew.
+
+```
+$ brew tap hikouki/docin
+$ brew install docin
+```
+
 # License
 
 The MIT License (MIT)
